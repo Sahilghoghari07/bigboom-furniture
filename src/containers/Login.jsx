@@ -34,7 +34,7 @@ function Login() {
                         <p>Forgot password? <Link to={'#'} className='text-black font-semibold hover:underline hover:text-orange-500 transition-all'>reset here</Link></p>
                     </div>
 
-                    <PrimaryButton type="submit" text="Login" />
+                    <PrimaryButton type="submit" text="Login" className="w-full" />
                 </form>
 
                 {/* Register */}

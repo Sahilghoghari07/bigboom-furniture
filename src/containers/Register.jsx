@@ -41,7 +41,7 @@ function Register() {
                         <input type="password" name="confirmPassword" id="confirmPassword" className='w-full px-4 py-3 bg-black/20 rounded-xl text-black placeholder-black-300 border border-black/30 focus:outline-none focus:ring-1 focus:ring-black/50' placeholder='Confirm password' />
                     </div>
 
-                    <PrimaryButton type="submit" text="Create Account" />
+                    <PrimaryButton type="submit" text="Create Account" className="w-full" />
                 </form>
 
                 {/* Register */}
