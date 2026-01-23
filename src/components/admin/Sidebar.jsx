@@ -11,7 +11,7 @@ function Sidebar() {
         }`;
 
     return (
-        <aside className='bg-black h-screen fixed top-0 left-0 text-white transition-all duration-300 w-[18%] flex flex-col justify-between'>
+        <aside className='bg-black h-screen fixed top-0 left-0 text-white font-semibold transition-all duration-300 w-[18%] flex flex-col justify-between'>
 
             <nav className='mt-16'>
                 <NavLink to='/admin' end className={navClass}>Dashboard</NavLink>

@@ -11,7 +11,7 @@ function AdminLayout() {
                 <Sidebar />
                 <Outlet />
             </main>
-            <footer className='fixed bottom-0 w-full h-10 z-1 bg-orange-500 flex items-center justify-center'>
+            <footer className='fixed bottom-0 w-full h-10 z-1 bg-black text-orange-500 flex items-center justify-center'>
                 <p className='text-xl font-semibold'>
                     &copy; Made by <Link to={'https://github.com/Sahilghoghari07'} className='hover:underline transition-all'>Sahil</Link>
                 </p>
