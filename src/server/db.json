@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "51e6",
+      "pname": "a",
+      "qty": "1",
+      "status": ""
+    },
+    {
+      "id": "67ce",
+      "pname": "",
+      "qty": "",
+      "status": "Low stock"
+    },
+    {
+      "id": "c4cb",
+      "pname": "",
+      "qty": "",
+      "status": "Out of stock"
+    },
+    {
+      "id": "4cd5",
+      "pname": "",
+      "qty": "",
+      "status": ""
+    },
+    {
+      "id": "35dd",
+      "pname": "",
+      "qty": "",
+      "status": ""
+    },
+    {
+      "id": "6c76",
+      "pname": "",
+      "qty": "",
+      "status": ""
+    },
+    {
+      "id": "0222",
+      "pname": "",
+      "qty": "",
+      "status": "In stock"
+    }
+  ]
+}
