@@ -1,16 +1,75 @@
-# React + Vite
+# 🪑 BigBoom-Furniture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React + Vite** based front-end application for the *BigBoom Furniture* website — an e-commerce UI showcasing furniture products with fast performance and modular components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+✔️ Built with **React** and **Vite** for optimal performance  
+✔️ Clean and responsive UI  
+✔️ Component-based structure  
+✔️ Ready for integration with APIs or backend services  
+✔️ ESlint configured to enforce code quality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Installation Guide
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Step 1: Clone the repository
+```bash
+git clone https://github.com/Sahilghoghari07/bigboom-furniture.git
+```
+
+### Step 2: Go to project folder
+```bash
+cd bigboom-furniture
+```
+
+### Step 3: Install dependencies
+```bash
+npm install
+```
+
+### Step 4: Start development server
+```bash
+npm run dev
+```
+
+### Step 5: Open in browser
+```bash
+http://localhost:5173
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repo
+2. Create a branch
+```bash
+git checkout -b feature/YourFeature
+```
+3. Commit changes
+4. Push to your fork
+5. Create a Pull Request
+
+---
+
+## 📄 License
+
+This project is Open Source
+You are free to use, modify, and distribute it.
+
+---
+
+## 👨‍💻 Author
+
+Sahil Ghoghari
+GitHub: https://github.com/Sahilghoghari07
+
+---
+
+If you like this project, please ⭐ star the repository
