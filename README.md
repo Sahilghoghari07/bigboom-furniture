@@ -16,9 +16,10 @@ A modern **React + Vite** based front-end application for the *BigBoom Furniture
 
 ## 🛠 Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
+- tailwind CSS
 - React
 - Redux Toolkit
 - Firebase
