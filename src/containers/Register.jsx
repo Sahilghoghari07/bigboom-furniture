@@ -16,10 +16,9 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 function Register() {
-
-    const signInWithGoogle = async () =>{
-        await signInWithPopup(auth, googleProvider);
-    }
+  const signInWithGoogle = async () => {
+    await signInWithPopup(auth, googleProvider);
+  };
 
   const validationSchema = Yup.object({
     fullname: Yup.string().required("This field is required"),
@@ -44,9 +43,8 @@ function Register() {
     validationSchema,
     onSubmit: async (values) => {
       await createUserWithEmailAndPassword(auth, values.email, values.password);
-      await signInWithPopup(auth, provider);
     },
-  });  
+  });
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#212326] to-[#3c484e]">

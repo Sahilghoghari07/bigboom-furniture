@@ -1,8 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PrimaryButton from "../components/PrimaryButton";
+import * as Yup from "yup";
+import { useFormik } from "formik";
+import { FcGoogle } from "react-icons/fc";
+import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { app } from "../firebase";
+
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 function Login() {
+  const signInWithGoogle = async () => {
+    await signInWithPopup(auth, googleProvider);
+  };
+
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("This field is required"),
+    password: Yup.string().required("This field is required"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      signInWithEmailAndPassword(auth, values.email, values.password);
+    },
+  });
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#212326] to-[#3c484e]">
       <div className="bg-white backdrop-blur-xl border border-white/30 shadow-2xl rounded-2xl w-full max-w-md p-8">
@@ -13,7 +43,7 @@ function Login() {
         </div>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={formik.handleSubmit}>
           {/* Email */}
           <div>
             <label
@@ -26,9 +56,15 @@ function Login() {
               type="email"
               name="email"
               id="email"
-              className="w-full px-4 py-3 bg-black/20 rounded-xl text-black placeholder-black-300 border border-black/30 focus:outline-none focus:ring-1 focus:ring-black/50"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               placeholder="Enter your email"
+              className={`w-full px-4 py-3 bg-black/20 rounded-xl text-black placeholder-black-300 border focus:outline-none focus:ring-1 ${formik.touched.email && formik.errors.email ? "border-red-500 focus:ring-red-50" : "border-black/30 focus:ring-black/50"}`}
             />
+            {formik.touched.email && formik.errors.email && (
+              <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
+            )}
           </div>
 
           {/* Password */}
@@ -43,9 +79,17 @@ function Login() {
               type="password"
               name="password"
               id="password"
-              className="w-full px-4 py-3 bg-black/20 rounded-xl text-black placeholder-black-300 border border-black/30 focus:outline-none focus:ring-1 focus:ring-black/50"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               placeholder="Enter password"
+              className={`w-full px-4 py-3 bg-black/20 rounded-xl text-black placeholder-black-300 border focus:outline-none focus:ring-1 ${formik.touched.password && formik.errors.password ? "border-red-500 focus:ring-red-50" : "border-black/30 focus:ring-black/50"}`}
             />
+            {formik.touched.password && formik.errors.password && (
+              <p className="text-red-500 text-sm mt-1">
+                {formik.errors.password}
+              </p>
+            )}
           </div>
 
           {/* Options */}
@@ -62,6 +106,14 @@ function Login() {
           </div>
 
           <PrimaryButton type="submit" text="Login" className="w-full" />
+          <button
+            type="button"
+            onClick={signInWithGoogle}
+            className="w-full flex items-center justify-center gap-3 py-3 cursor-pointer rounded-xl border border-black/20 hover:-translate-y-0.5 hover:bg-orange-300 transition-all"
+          >
+            <FcGoogle className="h-5 w-5" />
+            <span className="font-medium">Continue with Google</span>
+          </button>
         </form>
 
         {/* Register */}
