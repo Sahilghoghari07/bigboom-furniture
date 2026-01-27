@@ -14,6 +14,17 @@ A modern **React + Vite** based front-end application for the *BigBoom Furniture
 
 ---
 
+## 🛠 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Redux Toolkit
+- Firebase
+
+---
+
 ## 🧰 Installation Guide
 
 ### Step 1: Clone the repository
@@ -67,8 +78,7 @@ You are free to use, modify, and distribute it.
 
 ## 👨‍💻 Author
 
-Sahil Ghoghari
-GitHub: https://github.com/Sahilghoghari07
+[Sahil Ghoghari](https://github.com/Sahilghoghari07)
 
 ---
 
