@@ -1,10 +1,24 @@
 {
   "products": [
     {
-      "id": "ca68",
       "pname": "Monitor",
       "qty": 12,
-      "price": 1212,
+      "price": 4999,
+      "status": "In stock",
+      "id": "ca68"
+    },
+    {
+      "id": "7aba",
+      "pname": "CPU",
+      "qty": 5,
+      "price": 9999,
+      "status": "Low stock"
+    },
+    {
+      "id": "674e",
+      "pname": "Mouse",
+      "qty": 15,
+      "price": 399,
       "status": "In stock"
     }
   ]
