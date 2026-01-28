@@ -7,7 +7,7 @@ function AdminLayout() {
   return (
     <>
       <Topbar />
-      <main className="flex bg-gray-100 h-screen">
+      <main className="flex bg-gray-100 min-h-screen">
         <Sidebar />
         <Outlet />
       </main>

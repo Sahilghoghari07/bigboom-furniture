@@ -1,3 +1,11 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "ca68",
+      "pname": "Monitor",
+      "qty": 12,
+      "price": 1212,
+      "status": "In stock"
+    }
+  ]
 }
