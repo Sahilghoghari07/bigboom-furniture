@@ -8,17 +8,10 @@
       "id": "ca68"
     },
     {
-      "id": "7aba",
-      "pname": "CPU",
-      "qty": 5,
-      "price": 9999,
-      "status": "Low stock"
-    },
-    {
-      "id": "674e",
-      "pname": "Mouse",
-      "qty": 15,
-      "price": 399,
+      "id": "7a66",
+      "pname": "fgh",
+      "qty": 34,
+      "price": 344,
       "status": "In stock"
     }
   ]

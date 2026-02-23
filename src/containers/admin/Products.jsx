@@ -14,6 +14,7 @@ import {
   fetchProducts,
   updateProduct,
 } from "../../redux/features/products/productSlice";
+import { toast } from "react-toastify";
 
 function Products() {
   const [pname, setPname] = useState("");
@@ -33,7 +34,7 @@ function Products() {
 
     // validation
     if (!pname.trim() || !qty || !price) {
-      alert("All fields are required");
+      toast.error("All fields are required");
       return;
     }
 

@@ -1,20 +1,24 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "./containers/Login";
-import Register from "./containers/Register";
-import UserRoutes from "./routes/UserRoutes";
-import AdminRoutes from "./routes/AdminRoutes";
 import { Bounce, ToastContainer } from "react-toastify";
+import Splashscreen from "./containers/Splashscreen";
+
+const Login = lazy(() => import("./containers/Login"));
+const Register = lazy(() => import("./containers/Register"));
+const AdminRoutes = lazy(() => import("./routes/AdminRoutes"));
+const UserRoutes = lazy(() => import("./routes/UserRoutes"));
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/admin/*" element={<AdminRoutes />} />
-        <Route path="/*" element={<UserRoutes />} />
-      </Routes>
+      <Suspense fallback={<Splashscreen />}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/admin/*" element={<AdminRoutes />} />
+          <Route path="/*" element={<UserRoutes />} />
+        </Routes>
+      </Suspense>
 
       <ToastContainer
         position="top-center"
